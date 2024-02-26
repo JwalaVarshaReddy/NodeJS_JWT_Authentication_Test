@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use((req,res,next) => {
     res.setHeader('Access-Control-Allow-Origin','http://localhost:3000');
-    res.setHeader('Access-Control-Allow-Headers','Content-type,Aythorization');
+    res.setHeader('Access-Control-Allow-Headers','Content-type,Authorization');
     next();
 });
 
@@ -27,12 +27,12 @@ const jwtMW = expressJwt({
 let users = [
     {
         id: 1,
-        username: 'goutam',
+        username: 'varsha',
         password: '123'
     },
     {
         id: 1,
-        username: 'pelluri',
+        username: 'reddy',
         password: '456'
     }
 ]
